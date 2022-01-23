@@ -1,19 +1,18 @@
-public class AnnonymousInnerClass 
-{
-    public static void main(String[] args) 
-    {
-       AnimalPig ap = new AnimalPig();
-       ap.Sound();
-       AnimalPig godzilla = new AnimalPig() //godzilla is the inner class created annonumously inside the animal class
-       {
-           @Override
-           void Sound() // overriding the method of the animal class
-           {
-               System.out.println("The godzilla says: bwaarhrhrhheharraea");
-           }
+abstract class AnonymousInnerClass {
+    public abstract void display();
+ }
+
+
+ public class AnnonymousInnerClass {
+
+ public static void main(String[] args) {
+ AnonymousInnerClass i = new AnonymousInnerClass() {
+
+          public void display() {
+             System.out.println("Anonymous Inner Class");
+          }
        };
-       godzilla.Sound();
-       
+       i.display();
     }
-}
+ }
 
